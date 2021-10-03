@@ -1,20 +1,23 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
-  //TODO: Implement HomeController
+class HomeController extends GetxController with SingleGetTickerProviderMixin {
+  late final AnimationController animationController;
 
-  final count = 0.obs;
+  late final Animation<double> animation;
+
   @override
   void onInit() {
     super.onInit();
-  }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
+    animationController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 1000),
+    )..repeat(reverse: true);
 
-  @override
-  void onClose() {}
-  void increment() => count.value++;
+    animation = CurvedAnimation(
+      parent: animationController,
+      curve: Curves.fastOutSlowIn,
+    );
+  }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo/app/controllers/task_controller.dart';
 import 'package:todo/app/data/models/task_model.dart';
+import 'package:todo/app/modules/home/controllers/home_controller.dart';
 import 'package:todo/app/routes/app_pages.dart';
 
 class TodoItem extends StatelessWidget {
@@ -17,6 +18,7 @@ class TodoItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var taskController = Get.find<TaskController>();
+    var homeController = Get.find<HomeController>();
 
     return Dismissible(
       key: UniqueKey(),
@@ -87,12 +89,15 @@ class TodoItem extends StatelessWidget {
                   : TextDecoration.none,
             ),
           ),
-          trailing: Container(
-            height: 10,
-            width: 10,
-            decoration: BoxDecoration(
-              color: task.isDone! ? Colors.red : Colors.green,
-              shape: BoxShape.circle,
+          trailing: FadeTransition(
+            opacity: homeController.animation,
+            child: Container(
+              height: 10,
+              width: 10,
+              decoration: BoxDecoration(
+                color: task.isDone! ? Colors.red : Colors.green,
+                shape: BoxShape.circle,
+              ),
             ),
           ),
         ),
