@@ -1,16 +1,21 @@
-# todo
+# Todo App
 
-A new Flutter project.
+Create by [me](https://github.com/andikadeveloper)
 
-## Getting Started
+# Feature:
+  - Add task
+  - Delete task
+  - Edit task
 
-This project is a starting point for a Flutter application.
+# Tools and Framework:
+  - Visual Studio Code
+  - Flutter
+  - GetX
+  - Hive
 
-A few resources to get you started if this is your first Flutter project:
+# Screenshots
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://github.com/andikadeveloper/todo/blob/main/assets/screenshots/Screenshot-1.png" />
+<img src="https://github.com/andikadeveloper/todo/blob/main/assets/screenshots/Screenshot-2.png" />
+<img src="https://github.com/andikadeveloper/todo/blob/main/assets/screenshots/Screenshot-3.png" />
+<img src="https://github.com/andikadeveloper/todo/blob/main/assets/screenshots/Screenshot-4.png" />
