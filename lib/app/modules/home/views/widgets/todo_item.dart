@@ -89,17 +89,26 @@ class TodoItem extends StatelessWidget {
                   : TextDecoration.none,
             ),
           ),
-          trailing: FadeTransition(
-            opacity: homeController.animation,
-            child: Container(
-              height: 10,
-              width: 10,
-              decoration: BoxDecoration(
-                color: task.isDone! ? Colors.red : Colors.green,
-                shape: BoxShape.circle,
-              ),
-            ),
-          ),
+          trailing: task.isDone!
+              ? Container(
+                  height: 10,
+                  width: 10,
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    shape: BoxShape.circle,
+                  ),
+                )
+              : FadeTransition(
+                  opacity: homeController.animation,
+                  child: Container(
+                    height: 10,
+                    width: 10,
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                ),
         ),
       ),
     );
